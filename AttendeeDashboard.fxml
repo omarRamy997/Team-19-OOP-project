@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eventmanagement.Controller">
+
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="8">
+         <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+         </padding>
+
+         <!-- Left-side controls -->
+         <Button onAction="#displayInfo" text="Show Info" />
+         <Button onAction="#showAvailableEvents" text="View Events" />
+         <Button onAction="#purchaseTicket" text="Purchase Ticket" />
+
+         <!-- Spacer grows to push Logout to the far right -->
+         <Region HBox.hgrow="ALWAYS" />
+
+         <!-- Logout button pinned right -->
+         <Button fx:id="LogoutButton" onAction="#Logout" onMouseClicked="#Logout" onMouseDragged="#Logout" onTouchMoved="#Logout" onTouchPressed="#Logout" prefHeight="24" prefWidth="60" text="Logout" />
+      </HBox>
+   </top>
+
+   <!-- Center: output area -->
+   <center>
+      <TextArea fx:id="txtDisplay" editable="false" prefHeight="350" prefWidth="600" wrapText="true" />
+   </center>
+</BorderPane>

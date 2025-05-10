@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eventmanagement.Controller">
+   <children>
+      <Label layoutX="277.0" layoutY="28.0" text="Organizer Dashboard">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogoutButton" layoutX="700.0" layoutY="20.0" mnemonicParsing="false" onAction="#Logout" onMouseClicked="#Logout" onMouseDragged="#Logout" onTouchMoved="#Logout" onTouchPressed="#Logout" text="Logout" />
+
+      <VBox layoutX="14.0" layoutY="55.0" prefHeight="315.0" prefWidth="306.0" spacing="10.0">
+         <Label text="Create New Event">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <TextField fx:id="eventNameField" promptText="Event Name" />
+         <TextField fx:id="eventIDField" promptText="Event ID" />
+         <TextField fx:id="ticketPriceField" promptText="Ticket Price" />
+         <Label text="Select Room:" />
+         <ListView fx:id="availableRoomsForEventListView" prefHeight="100.0" />
+         <HBox spacing="10.0">
+            <VBox>
+               <Label text="Start Time (HH:mm)" />
+               <TextField fx:id="startTimeField" promptText="HH:mm" />
+            </VBox>
+            <VBox>
+               <Label text="End Time (HH:mm)" />
+               <TextField fx:id="endTimeField" promptText="HH:mm" />
+            </VBox>
+         </HBox>
+         <Button fx:id="createEventButton" mnemonicParsing="false" onAction="#handleCreateEvent" text="Create Event" />
+      </VBox>
+
+      <VBox layoutX="450.0" layoutY="80.0" prefWidth="300.0" spacing="10.0">
+         <Label text="My Created Events">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <ListView fx:id="myEventsListView" prefHeight="150.0" />
+         <Button fx:id="viewEventAttendeesButton" mnemonicParsing="false" onAction="#handleViewEventAttendees" text="View Attendees" />
+         <ListView fx:id="eventAttendeesListView" prefHeight="100.0" />
+      </VBox>
+
+      <VBox layoutX="47.0" layoutY="410.0" prefWidth="350.0" spacing="10.0">
+         <HBox spacing="10.0">
+            <VBox>
+               <Label text="Check Start Time (HH:mm)" />
+               <TextField fx:id="checkStartTimeField" promptText="HH:mm" />
+            </VBox>
+            <VBox>
+               <Label text="Check End Time (HH:mm)" />
+               <TextField fx:id="checkEndTimeField" promptText="HH:mm" />
+            </VBox>
+         </HBox>
+         <Button fx:id="viewAvailableRoomsButton" mnemonicParsing="false" onAction="#handleViewAvailableRooms" text="View Available Rooms" />
+         <ListView fx:id="availableRoomsListViewOutput" prefHeight="101.0" prefWidth="350.0" />
+      </VBox>
+      <Label layoutX="576.0" layoutY="434.0" text="Select Category:" />
+      <ListView fx:id="categoriesForEventListView" layoutX="495.0" layoutY="461.0" prefHeight="100.0" />
+      <Label layoutX="47.0" layoutY="382.0" text="Available Rooms for a Time Slot">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

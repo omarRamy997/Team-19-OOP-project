@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eventmanagement.Controller">
+   <children>
+      <Text layoutX="179.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the EMS">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <Text layoutX="219.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your vision, Our mission">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="251.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up As:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="attendeeSignUpButton" layoutX="127.0" layoutY="265.0" mnemonicParsing="false" onAction="#switchToAttendeeSignUp" onMouseClicked="#switchToAttendeeSignUp" onMousePressed="#switchToAttendeeSignUp" onTouchMoved="#switchToAttendeeSignUp" onTouchPressed="#switchToAttendeeSignUp" text="Attendee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="adminSignUpButton" layoutX="273.0" layoutY="265.0" mnemonicParsing="false" onAction="#switchToAdminSignUp" onMouseClicked="#switchToAdminSignUp" onMousePressed="#switchToAdminSignUp" onTouchMoved="#switchToAdminSignUp" onTouchPressed="#switchToAdminSignUp" text="Admin">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="organizerSignUpButton" layoutX="397.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#switchToOrganizerSignUp" onMousePressed="#switchToOrganizerSignUp" onTouchMoved="#switchToOrganizerSignUp" onTouchPressed="#switchToOrganizerSignUp" text="Organizer">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
